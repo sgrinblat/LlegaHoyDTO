@@ -1,0 +1,42 @@
+.top-5 {
+  top: 5px;
+}
+
+.fondo-header {
+  background-color: #d707cc;
+}
+
+a:hover {
+  color: #f8a724 !important;
+  font-weight: bold;
+}
+
+.logo-llegahoy-blanco {
+  max-height: 100px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.logo-llegahoy-blanco:hover {
+  filter: invert(15%);
+}
+
+.logo-llegahoy-violeta:hover {
+  filter: hue-rotate(85deg) brightness(500%);
+}
+
+.div__boton-oscuro {
+  padding-left: 15px;
+}
+
+.div__boton-oscuro {
+  padding-left: 15px;
+}
+
+@media only screen and (max-width: 768px),
+only screen and (min-width: 768px) and (max-width: 1199px) {
+  .div__boton-oscuro {
+      padding-left: 0;
+      padding-top: 10px;
+  }
+}

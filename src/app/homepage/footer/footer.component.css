@@ -1,0 +1,14 @@
+.logo-llegahoy-violeta {
+  max-height: 100px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+a:hover {
+  color: #f8a724 !important;
+  font-weight: bold;
+}
+
+.logo-llegahoy-violeta:hover {
+  filter: hue-rotate(85deg) brightness(500%);
+}

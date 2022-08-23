@@ -1,0 +1,54 @@
+<div class="my-login-page">
+  <div class="container">
+    <h1 class="text-center pt-5 display-text">¿Aún no tenes tu cuenta?</h1>
+    <h3 class="text-center pt-2 display-text">No te preocupes, aquí podes registrar tu usuario.</h3>
+  </div>
+  <section class="h-100">
+    <div class="container h-100">
+        <div class="row justify-content-md-center h-100">
+            <div class="card-wrapper formulario">
+                <div class="card fat fondo-web">
+                    <div class="card-body ">
+                        <h4 class="card-title text-center display-text">Registrá tu usuario y contraseña</h4>
+
+                        <form (ngSubmit)="registrarUsuario()" [formGroup]="contactForm" class="my-login-validation ">
+                            <div class="form-group mb-3">
+                                <label class="mb-3 display-text" for="username">Usuario</label>
+                                <input [(ngModel)]="user.registerUsername" [class.is-invalid]="contactForm.get('usuario').invalid && contactForm.get('usuario').touched" id="userID" type="text" class="form-control bg-light mb-3" name="userID" formControlName="usuario" required >
+                                <div *ngIf="contactForm.get('usuario')?.touched && contactForm.get('usuario')?.errors?.['required'] "
+                  class="alert alert-danger formulario-error text-center mt-3" >*El campo es obligatorio</div>
+                  <div *ngIf="contactForm.get('usuario')?.touched && contactForm.get('usuario')?.errors?.['minlength'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de usuario debe tener al menos {{contactForm.get('usuario')?.errors?.['minlength'].requiredLength}} letras</div>
+                  <div *ngIf="contactForm.get('usuario')?.touched && contactForm.get('usuario')?.errors?.['maxlength'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de usuario no puede tener más de {{contactForm.get('usuario')?.errors?.['maxlength'].requiredLength}} letras</div>
+
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label class="mb-3 display-text" for="password">Contraseña</label>
+                                <input [(ngModel)]="user.registerPassword" [class.is-invalid]="contactForm.get('password').invalid && contactForm.get('password').touched" id="password" type="password" class="form-control bg-light" name="password" formControlName="password" required>
+                                <div *ngIf="contactForm.get('password')?.touched && contactForm.get('password')?.errors?.['required'] "
+                  class="alert alert-danger formulario-error text-center mt-3" >*El campo es obligatorio</div>
+                  <div *ngIf="contactForm.get('password')?.touched && contactForm.get('password')?.errors?.['minlength'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de contraseña debe tener al menos {{contactForm.get('password')?.errors?.['minlength'].requiredLength}} letras</div>
+                  <div *ngIf="contactForm.get('password')?.touched && contactForm.get('password')?.errors?.['maxlength'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de contraseña no puede tener más de {{contactForm.get('password')?.errors?.['maxlength'].requiredLength}} letras</div>
+
+                            </div>
+
+                            <div class="form-group m-0 mb-3 text-center">
+                                <button (ngSubmit)="registrarUsuario()" [disabled]="contactForm.invalid" type="submit" class="btn btn-warning btn-block">
+                                    Registrar
+                                </button>
+                            </div>
+                            <div class="mt-4 text-center display-text">
+                                ¿Ya estás registrado? <a class="link-formulario" routerLink="../login">Iniciar sesión</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+</div>

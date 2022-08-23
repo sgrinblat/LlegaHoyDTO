@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  max-width: 100%
+}
+
+*::-webkit-scrollbar {
+  width: 15px;
+  background: #efefef;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgb(248, 197, 56);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: rgb(211, 164, 33);
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background: rgb(164, 125, 17);
+}
+
+body.poster {
+  background-attachment: fixed;
+}
+
+.fondo-header {
+  background-color: #d707cc;
+}
+
+.switch {
+  background-color: #343D5B;
+  border-radius: 1000px;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: none;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+@media only screen and (max-width: 768px),
+only screen and (min-width: 768px) and (max-width: 1199px) {
+  .switch {
+      margin: auto;
+  }
+}
+
+.switch::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background-color: #F1F1F1;
+  top: 0;
+  left: 0;
+  right: unset;
+  border-radius: 110px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.switch.active {
+  background-color: orange;
+  color: #000;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.switch.active::after {
+  right: 0;
+  left: unset;
+  -webkit-transition: .1s ease all;
+  transition: .1s ease all;
+}
+
+.switch span {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: block;
+  background: none;
+  color: #fff;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.fondo-web {
+  background-color: #fff;
+  -webkit-transition: .8s ease all;
+  transition: .8s ease all;
+}
+
+body.dark .fondo-web {
+  background-color: #232526;
+  -webkit-transition: .8s ease all;
+  transition: .8s ease all;
+}
+
+body.dark .bg-light {
+  background-color: #3a3b3b !important;
+  -webkit-transition: .8s ease all;
+  transition: .8s ease all;
+}
+
+body.dark .display-text{
+  color: #fff !important;
+  -webkit-transition: .8s ease all;
+  transition: .8s ease all;
+}

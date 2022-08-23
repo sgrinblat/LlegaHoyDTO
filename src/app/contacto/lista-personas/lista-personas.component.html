@@ -1,0 +1,41 @@
+<div class="container">
+  <h1 class="text-center display-text pt-5">Vista privada de usuarios y formularios registrados</h1>
+</div>
+<div class="container">
+  <h2 class="text-center display-text mt-4 mb-4">Lista de personas</h2>
+  <table class="table table-striped mb-4">
+    <thead class="table">
+      <tr>
+        <th class="display-text">Nombre</th>
+        <th class="display-text">Apellido</th>
+        <th class="display-text">Email</th>
+        <th class="display-text">Mensaje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let persona of personas">
+        <td class="display-text">{{persona.nameForm}}</td>
+        <td class="display-text">{{persona.lastnameForm}}</td>
+        <td class="display-text">{{persona.mailForm}}</td>
+        <td class="display-text">{{persona.messageForm}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <br><br><br><br>
+  <h2 class="text-center display-text mt-4 mb-4">Lista de usuarios</h2>
+  <table class="table table-striped mb-4">
+    <thead class="table">
+      <tr>
+        <th class="display-text">Nombre</th>
+        <th class="display-text">Contraseña</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td class="display-text">{{usuario.registerUsername}}</td>
+        <td class="display-text">{{usuario.registerPassword}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<br><br>

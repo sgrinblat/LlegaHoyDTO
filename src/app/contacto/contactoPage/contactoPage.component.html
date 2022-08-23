@@ -1,0 +1,59 @@
+<div class="container">
+  <h1 class="text-center pt-5 display-text">Ponete en contacto con nosotros</h1>
+  <h3 class="text-center pt-2 display-text">Este formulario es lo que te separa de contar con nosotros en tu equipo ⚽</h3>
+</div>
+<div class="formulario">
+  <div class="container">
+          <div class="row mb-4">
+            <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" >
+              <div class="col">
+
+                <div>
+                  <label class="form-label display-text" for="formularioNombre">Nombre</label>
+                  <input formControlName="formularioNombre" name="formularioNombre" [class.is-invalid]="contactForm.get('formularioNombre').invalid && contactForm.get('formularioNombre').touched" type="text" id="formularioNombre" class="formulario-input bg-light form-control" formControlName="formularioNombre" required />
+                  <div *ngIf="contactForm.get('formularioNombre')?.touched && contactForm.get('formularioNombre')?.errors?.['required'] "
+                  class="alert alert-danger formulario-error text-center mt-3" >*El campo de nombre es obligatorio</div>
+                  <div *ngIf="contactForm.get('formularioNombre')?.touched && contactForm.get('formularioNombre')?.errors?.['minlength'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de nombre debe contener al menos {{contactForm.get('formularioNombre')?.errors?.['minlength'].requiredLength}} letras</div>
+                </div>
+
+                <div>
+                  <label class="form-label display-text" for="formularioApellido">Apellido</label>
+                  <input formControlName="formularioApellido" name="formularioApellido" [class.is-invalid]="contactForm.get('formularioApellido').invalid && contactForm.get('formularioApellido').touched" type="text" id="formularioApellido" class="formulario-input bg-light form-control" required formControlName="formularioApellido"  />
+                  <div *ngIf="contactForm.get('formularioApellido')?.touched && contactForm.get('formularioApellido')?.errors?.['required'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de apellido es obligatorio</div>
+                  <div *ngIf="contactForm.get('formularioApellido')?.touched && contactForm.get('formularioApellido')?.errors?.['minlength'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de apellido debe contener al menos {{contactForm.get('formularioApellido')?.errors?.['minlength'].requiredLength}} letras</div>
+                </div>
+
+                <div>
+                  <label class="form-label display-text" for="formularioEmail">Correo</label>
+                  <input formControlName="formularioEmail" name="formularioEmail" [class.is-invalid]="contactForm.get('formularioEmail').invalid && contactForm.get('formularioEmail').touched"  type="email" id="formularioEmail" class="formulario-input bg-light form-control" required formControlName="formularioEmail"/>
+                  <div *ngIf="contactForm.get('formularioEmail')?.touched && contactForm.get('formularioEmail')?.errors?.['required'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de Email es obligatorio</div>
+                  <div *ngIf="contactForm.get('formularioEmail')?.touched && contactForm.get('formularioEmail')?.errors?.['email']"
+                  class="alert alert-danger formulario-error mt-3" >*El campo de Email es inválido</div>
+                </div>
+
+                  <div>
+                    <label class="form-label display-text" for="formularioMensaje">Mensaje</label>
+                    <textarea formControlName="formularioMensaje" name="formularioMensaje" [class.is-invalid]="contactForm.get('formularioMensaje').invalid && contactForm.get('formularioMensaje').touched" type="text" id="formularioMensaje" class="formulario-input bg-light form-control"
+                    placeholder="Escribinos tu consulta!" required formControlName="formularioMensaje"></textarea>
+                    <div *ngIf="contactForm.get('formularioMensaje')?.touched && contactForm.get('formularioMensaje')?.errors?.['required'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de Mensaje es obligatorio</div>
+                  <div *ngIf="contactForm.get('formularioMensaje')?.touched && contactForm.get('formularioMensaje')?.errors?.['minlength'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de Mensaje debe contener al menos {{contactForm.get('formularioMensaje')?.errors?.['minlength'].requiredLength}} letras</div>
+                  <div *ngIf="contactForm.get('formularioMensaje')?.touched && contactForm.get('formularioMensaje')?.errors?.['maxlength'] "
+                  class="alert alert-danger formulario-error mt-3" >*El campo de Mensaje no puede contener más de {{contactForm.get('formularioMensaje')?.errors?.['maxlength'].requiredLength}} letras</div>
+                  </div>
+
+                  <button (click)="onSubmit()" [swal]="['Hecho!', 'Has enviado el formulario', 'success']" [disabled]="contactForm.invalid" type="submit" id="enviarFormulario" class="btn btn-warning btn-block btn-lg mb-4 mt-4">Enviar</button>
+              </div>
+            </form>
+                  <div class="whatsapp">
+      <a href="https://wa.me/541132379619?text=Hola!%20Me%20gustaría%20hacerles%20una%20consulta."
+          target="_blank">
+          <img class="whatsapp-icono" src="../../../assets/images/whatsapp.png" alt="">
+          <p class="text-center pt-4 display-text" >¡Si preferis escribirnos por WhatsApp, podes hacerlo clickeando acá!</p>
+        </a>
+      </div>

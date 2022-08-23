@@ -1,0 +1,242 @@
+.IVA {
+  color: #d707cc;
+  font-size: 20px;
+  padding: 10px 0 10px 0;
+  font-weight: 500;
+}
+
+.div__botones {
+  padding-bottom: 30px;
+}
+
+.boton__servicios {
+  background: none;
+  border: none;
+  font-size: 20px;
+  padding: 15px 0 30px 0;
+  width: 100%;
+  text-align: start;
+  border-right: 1px solid #d707cc;
+  display: flex;
+  align-items: center;
+}
+
+.boton__servicios:hover {
+  background-color: #adb5bd;
+}
+
+.boton__servicios:active {
+  background-color: #8e979f;
+}
+
+button svg {
+  display: inline;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+button p {
+  display: inline;
+  padding: 10px 0 0 85px;
+  margin-top: 15px;
+}
+
+ul li {
+  display: inline;
+}
+
+ul li p {
+  display: inline;
+}
+
+ul svg {
+  margin-left: 7px;
+}
+
+.precios__servicios {
+  display: inline;
+  float: right;
+}
+
+.tooltip-test {
+  color: #434445;
+}
+
+.accordion {
+  display: none;
+}
+
+.titulo__reviews {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0 40px 0;
+}
+
+.valorDiferencial {
+  display: grid;
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: ". ventajas .";
+  width: 100%;
+  background-color: #d707cc;
+  padding: 50px 0 50px 0;
+}
+
+.ventajas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "primera_review segunda_review tercera_review";
+  grid-area: ventajas;
+  color: #000;
+  padding-bottom: 50px;
+
+}
+
+.ventajas p {
+  font-size: 18px;
+  margin: 10px;
+}
+
+.primera_review {
+  background-color: #efefef;
+  grid-area: primera_review;
+  justify-self: center;
+  border-radius: 1.5%;
+  margin-right: 10px;
+  padding-top: 5px;
+  box-shadow: 0px 11px 22px -3px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 11px 22px -3px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 11px 22px -3px rgba(0, 0, 0, 0.7);
+  transition: 0.5s ease-in-out;
+  min-height: 480px;
+  max-height: 480px;
+
+}
+
+.primera_review:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+  z-index: 2;
+  background-color: #dedada;
+}
+
+.segunda_review {
+  background: #efefef;
+  grid-area: segunda_review;
+  justify-self: center;
+  padding-top: 5px;
+  border-radius: 1.5%;
+  margin-right: 10px;
+  box-shadow: 0px 11px 22px -3px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 11px 22px -3px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 11px 22px -3px rgba(0, 0, 0, 0.7);
+  transition: 0.5s ease-in-out;
+  min-height: 480px;
+  max-height: 480px;
+}
+
+.segunda_review:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+  z-index: 2;
+  background-color: #dedada;
+}
+
+.tercera_review {
+  background: #efefef;
+  grid-area: tercera_review;
+  justify-self: center;
+  padding-top: 5px;
+  border-radius: 1.5%;
+  margin-right: 10px;
+  box-shadow: 0px 11px 22px -3px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0px 11px 22px -3px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0px 11px 22px -3px rgba(0, 0, 0, 0.7);
+  transition: 0.5s ease-in-out;
+  min-height: 480px;
+  max-height: 480px;
+}
+
+.tercera_review:hover {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+  z-index: 2;
+  background-color: #dedada;
+}
+
+.review {
+  height: 200px;
+  border-radius: 100%;
+  margin: 10px auto;
+  display: block;
+  border: 5px solid rgb(248, 197, 56);
+}
+
+#estrella {
+  color: rgb(248, 197, 56);
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 300px) and (max-width: 768px) {
+
+  .accordion {
+      display: block;
+      width: 100%;
+      padding: 15px 0 30px 0;
+
+  }
+
+  .lista__servicios-desktop,
+  .div__botones {
+      display: none;
+  }
+
+}
+
+@media screen and (min-width: 300px) and (max-width: 1000px) {
+
+  .valorDiferencial {
+      display: block;
+  }
+
+  .ventajas {
+      display: block;
+  }
+
+  .primera_review {
+      padding-top: 5px;
+      margin-bottom: 20px;
+      margin-right: 5px;
+      margin-left: 5px;
+  }
+
+  .segunda_review {
+      padding-top: 5px;
+      margin-bottom: 20px;
+      margin-right: 5px;
+      margin-left: 5px;
+  }
+
+  .tercera_review {
+      padding-top: 5px;
+      margin-bottom: 20px;
+      margin-right: 5px;
+      margin-left: 5px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {
+
+  .primera_review,
+  .segunda_review,
+  .tercera_review {
+      min-height: 560px;
+      max-height: 560px;
+  }
+}
